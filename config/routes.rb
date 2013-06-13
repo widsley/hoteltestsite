@@ -1,4 +1,5 @@
 Thailandhotel::Application.routes.draw do
+  resources :facilities
 
   namespace :thailand do
     resources :bangkok_hotels

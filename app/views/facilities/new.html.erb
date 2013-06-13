@@ -1,0 +1,44 @@
+<h1>ファシリティの追加</h1>
+
+<%= form_for @facility do |f| %>
+  <% if @facility.errors.any?%>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @facility.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :summary %><br />
+    <%= f.text_area :summary, :size => "20x7"%>
+  </p>
+  <p>
+    <%= f.label :activity %><br />
+    <%= f.text_area :activity, :size => "20x7" %>
+  </p>
+  <p>
+    <%= f.label :service %><br />
+    <%= f.text_area :service, :size => "20x7" %>
+  </p>
+  <p>
+    <%= f.label :internet %><br />
+    <%= f.text_area :internet, :size => "20x7" %>
+  </p>
+  <p>
+    <%= f.label :parking %><br />
+    <%= f.text_field :parking %>
+  </p>
+  <p>
+    <%= f.label :checkin %><br />
+    <%= f.text_field :checkin %>
+  </p>
+  <p>
+    <%= f.label :checkout %><br />
+    <%= f.text_field :checkout %>
+  </p>
+  <p class="button"><%= f.submit %></p>
+<% end %>
+

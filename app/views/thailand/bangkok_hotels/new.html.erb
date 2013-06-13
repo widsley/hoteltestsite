@@ -1,0 +1,34 @@
+<div class="row">
+ <div class="span6 offset3">
+        <%= form_for [:thailand, @bangkok] do |f| %>
+          <% if @bangkok.errors.any?%>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @bangkok.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+          <p>
+           <%= f.label :name %>
+           <%= f.text_field :name %>
+          </p>
+          <p>
+           <%= f.label :address %>
+           <%= f.text_field :address %>
+          </p>
+          <p>
+           <%= f.label :map %>
+           <%= f.text_field :map %>
+          </p>
+          <p>
+           <%= f.label :character %>
+           <%= f.text_field :character %>
+          </p>
+       <p class="button"><%= f.submit %></p>
+        <% end %>
+ </div>
+</div>
+
